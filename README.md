@@ -23,4 +23,4 @@ plot(z, hz, type="l", lty=1, xlab="Units",                 ## Plot function
   ylab="Density", main="Two tailed t-test of two samples of an independent variable",col="Red", frame.plot = FALSE)
 lines(y, hy, type="l", lty=1, col="Blue")                 ## Second set plot overlay    
 
-boxplot(y,b,ylab="Days Lapsed", names=c("2013Q3","2014Q1"))	      ## Boxplot function
+boxplot(y,b,ylab="Days Lapsed", names=c("First Sample","second Sample"))	      ## Boxplot function
