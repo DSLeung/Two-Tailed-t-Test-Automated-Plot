@@ -9,7 +9,9 @@ z<-(x$V2)                                     ## Isolate second sample
 my<-mean(y)                                       ## Find mean of first sample
 mz<-mean(z)                                       ## Find mean of second sample
 sdy<-sd(y)                                            ## Find standard deviation of first sample 
-sdz<-sd(z)                                            ## FInd standard deviation of second sample
+sdz<-sd(z)                                            ## Find standard deviation of second sample
+
+t<-t.text(y,z)                                            ## Perform T Test on first and second sample vectors
 
 hy<-dnorm(y, mean=my, sd=sdy, log=FALSE)                  ## Normal distribution of first sample
 hz<-dnorm(z, mean=mz, sd=sdz log=FALSE)                   ## Normal distribution of second sample
@@ -23,4 +25,4 @@ plot(z, hz, type="l", lty=1, xlab="Units",                 ## Plot function
   ylab="Density", main="Two tailed t-test of two samples of an independent variable",col="Red", frame.plot = FALSE)
 lines(y, hy, type="l", lty=1, col="Blue")                 ## Second set plot overlay    
 
-boxplot(y,b,ylab="Days Lapsed", names=c("First Sample","second Sample"))	      ## Boxplot function
+boxplot(y,z,ylab="Days Lapsed", names=c("First Sample","second Sample"))	      ## Boxplot function
