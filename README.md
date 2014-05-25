@@ -12,6 +12,7 @@ sdy<-sd(y)                                            ## Find standard deviation
 sdz<-sd(z)                                            ## Find standard deviation of second sample
 
 t<-t.text(y,z)                                            ## Perform T Test on first and second sample vectors
+wilcox.test(y,z)                                          ## Perform Wilcox Test on first and second sample vectors
 
 hy<-dnorm(y, mean=my, sd=sdy, log=FALSE)                  ## Normal distribution of first sample
 hz<-dnorm(z, mean=mz, sd=sdz log=FALSE)                   ## Normal distribution of second sample
