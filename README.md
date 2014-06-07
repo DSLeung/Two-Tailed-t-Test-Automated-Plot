@@ -20,10 +20,10 @@ hz<-dnorm(z, mean=mz, sd=sdz log=FALSE)                   ## Normal distribution
 colors <- c("red", "blue")                                ## Colour of lines for plot            
 labels <- c("Set 2", "Set 1", mz, my)                     ## Labels to be displated (names of sets and stdev values)    
 
-par(mfrow=c(1,2))                                         ## Define 2 Column, 1 Row Array for display of two charts
+par(mfrow=c(2,1))                                         ## Define 2 Column, 1 Row Array for display of two charts
 
 plot(z, hz, type="l", lty=1, xlab="Units",                 ## Plot function
   ylab="Density", main="Two tailed t-test of two samples of an independent variable",col="Red", frame.plot = FALSE)
 lines(y, hy, type="l", lty=1, col="Blue")                 ## Second set plot overlay    
 
-boxplot(y,z,ylab="Days Lapsed", names=c("First Sample","second Sample"))	      ## Boxplot function
+boxplot(y,z,ylab="Title", horizontal = TRUE,border = colors, names=c("First Sample","second Sample"))	      ## Boxplot function
